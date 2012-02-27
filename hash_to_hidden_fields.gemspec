@@ -8,7 +8,7 @@ Gem::Specification.new do |s|
   s.authors     = ["Brian Hempel"]
   s.email       = ["plasticchicken@gmail.com"]
   s.homepage    = "https://github.com/brianhempel/hash_to_hidden_fields"
-  s.summary     = %q{In goes a hash, out comes hidden fields. Great for preseving Rails parameters without abusing the session.}
+  s.summary     = %q{In goes a hash, out comes hidden fields. Great for preserving Rails parameters without abusing the session.}
   s.description = s.summary
 
   s.rubyforge_project = "hash_to_hidden_fields"
