@@ -45,7 +45,7 @@ describe ActionView::Base do
       @hash_to_hidden_fields = ActionView::Base.new.hash_to_hidden_fields(test_hash)
     end
 
-    it "produces the includes the correct tags" do
+    it "produces the correct tags" do
       # Ruby 1.8.7 doesn't have an ordered hash, hence this mess
       expected_html_blocks.each do |tags|
         @hash_to_hidden_fields.should include(tags.chomp)
