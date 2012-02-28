@@ -1,20 +1,20 @@
 # HashToHiddenFields [![Build Status](https://secure.travis-ci.org/brianhempel/hash_to_hidden_fields.png)](http://travis-ci.org/brianhempel/hash_to_hidden_fields)
 
-Sometimes in your Rails app you want to allow a user to begin an action, log in, then complete the action. The traditional way to handle this is to smash your params into the session, let the user log in, then pull the params out of the session if the login is successful. A better way is to have the login form resubmit the params.
+Sometimes in your Rails app you want a user to begin an action, log in, then complete the action. You smash their params into the session, let the user log in, then pull their params out of the session when the login is successful. END SESSION STORE ABUSE! A better way is to have the login form resubmit the params.
 
-Add to your Gemfile:
+Add this to your Gemfile:
 
 ```ruby
 gem "hash_to_hidden_fields"
 ```
 
-Then turn a hash into hidden fields in your form:
+Filter the params you want to save and turn them into hidden fields in your form:
 
 ```erb
 <%= hash_to_hidden_fields(@params_to_save) %>
 ```
 
-When the form is submitted again, all the old params will come through as well!
+When the form is submitted, all the old params will come through! Nested arrays and nested hashes are all preserved.
 
 ## Help make it better!
 
