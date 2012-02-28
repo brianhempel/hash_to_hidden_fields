@@ -48,7 +48,7 @@ describe ActionView::Base do
     it "produces the correct tags" do
       # Ruby 1.8.7 doesn't have an ordered hash, hence this mess
       expected_html_blocks.each do |tags|
-        @hash_to_hidden_fields.should include(tags.chomp)
+        @hash_to_hidden_fields.should include(tags)
       end
     end
 
