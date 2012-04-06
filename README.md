@@ -4,13 +4,13 @@ Sometimes in your Rails app you want a user to begin an action, log in, then com
 
 Add this to your Gemfile:
 
-```ruby
+``` ruby
 gem "hash_to_hidden_fields"
 ```
 
 Filter the params you want to save and turn them into hidden fields in your form:
 
-```erb
+``` erb
 <%= hash_to_hidden_fields(@params_to_save) %>
 ```
 
