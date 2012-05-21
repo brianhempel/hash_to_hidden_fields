@@ -8,6 +8,7 @@ test_hash = {
     "nested1" => "3",
     "nested2" => "4"
   },
+  "nil" => nil,
   "array" => [
     1, 2, "3", "abc"
   ],
