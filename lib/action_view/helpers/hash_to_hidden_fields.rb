@@ -1,3 +1,4 @@
+require 'active_support/core_ext/object/to_query'
 require 'action_view'
 require 'action_view/helpers'
 
@@ -5,8 +6,7 @@ module ActionView
   module Helpers
     module HashToHiddenFields
       def hash_to_hidden_fields(hash)
-        query_string = Rack::Utils.build_nested_query(hash)
-        pairs        = query_string.split(Rack::Utils::DEFAULT_SEP)
+        pairs        = hash.to_query.split(Rack::Utils::DEFAULT_SEP)
 
         tags = pairs.map do |pair|
           key, value = pair.split('=', 2).map { |str| Rack::Utils.unescape(str) }

@@ -9,7 +9,7 @@ test_hash = {
     "nested2" => "4"
   },
   "array" => [
-    "1", "2", "3", "abc"
+    1, 2, "3", "abc"
   ],
   "array of hashes" => [
     { "key 1"         => "val 1"        },
