@@ -1,6 +1,7 @@
 require 'active_support/core_ext/object/to_query'
 require 'action_view'
 require 'action_view/helpers'
+require 'rack/utils'
 
 module ActionView
   module Helpers
