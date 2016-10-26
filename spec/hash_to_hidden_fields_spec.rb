@@ -21,21 +21,21 @@ test_hash = {
 # Ruby 1.8.7 doesn't have an ordered hash, hence this mess
 # want to make sure arrays come back in the correct order
 expected_html_blocks = [
-'<input id="utf8" name="utf8" type="hidden" value="✓" />',
-'<input id="_method" name="_method" type="hidden" value="put" />',
-'<input id="something_nested1" name="something[nested1]" type="hidden" value="3" />',
-'<input id="something_nested2" name="something[nested2]" type="hidden" value="4" />',
+'<input type="hidden" name="utf8" id="utf8" value="✓" />',
+'<input type="hidden" name="_method" id="_method" value="put" />',
+'<input type="hidden" name="something[nested1]" id="something_nested1" value="3" />',
+'<input type="hidden" name="something[nested2]" id="something_nested2" value="4" />',
 <<-HTML,
-<input id="array_" name="array[]" type="hidden" value="1" />
-<input id="array_" name="array[]" type="hidden" value="2" />
-<input id="array_" name="array[]" type="hidden" value="3" />
-<input id="array_" name="array[]" type="hidden" value="abc" />
+<input type="hidden" name="array[]" id="array_" value="1" />
+<input type="hidden" name="array[]" id="array_" value="2" />
+<input type="hidden" name="array[]" id="array_" value="3" />
+<input type="hidden" name="array[]" id="array_" value="abc" />
 HTML
-'<input id="array_of_hashes__key_1" name="array of hashes[][key 1]" type="hidden" value="val 1" />',
+'<input type="hidden" name="array of hashes[][key 1]" id="array_of_hashes__key_1" value="val 1" />',
 <<-HTML,
-<input id="array_of_hashes__ooh__nes_____ting__" name="array of hashes[][ooh, nes&lt;&gt;&lt;&gt;&lt;ting!][]" type="hidden" value="x" />
-<input id="array_of_hashes__ooh__nes_____ting__" name="array of hashes[][ooh, nes&lt;&gt;&lt;&gt;&lt;ting!][]" type="hidden" value="z" />
-<input id="array_of_hashes__ooh__nes_____ting__" name="array of hashes[][ooh, nes&lt;&gt;&lt;&gt;&lt;ting!][]" type="hidden" value="y" />
+<input type="hidden" name="array of hashes[][ooh, nes&lt;&gt;&lt;&gt;&lt;ting!][]" id="array_of_hashes__ooh__nes_____ting__" value="x" />
+<input type="hidden" name="array of hashes[][ooh, nes&lt;&gt;&lt;&gt;&lt;ting!][]" id="array_of_hashes__ooh__nes_____ting__" value="z" />
+<input type="hidden" name="array of hashes[][ooh, nes&lt;&gt;&lt;&gt;&lt;ting!][]" id="array_of_hashes__ooh__nes_____ting__" value="y" />
 HTML
 ]
 expected_html_blocks.map!(&:chomp)
