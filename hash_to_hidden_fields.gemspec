@@ -21,6 +21,6 @@ Gem::Specification.new do |s|
   # specify any dependencies here; for example:
   s.add_development_dependency "rspec"
 
-  s.add_runtime_dependency "rack",       "~> 1.2"
+  s.add_runtime_dependency "rack",       ">= 1.2"
   s.add_runtime_dependency "actionpack", '>= 3'
 end
